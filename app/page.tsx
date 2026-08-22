@@ -38,8 +38,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#050505] px-4 py-8 text-white">
       <div className="mx-auto w-full max-w-[480px]">
 
-        {/* ================= HEADER ================= */}
-
+        {/* HEADER */}
         <section className="text-center">
           <div className="relative mx-auto h-[170px] w-[170px]">
             <div className="absolute inset-0 rounded-full bg-[#d6a62e]/20 blur-2xl" />
@@ -67,13 +66,14 @@ export default function Home() {
             <span className="h-px w-12 bg-[#9c7623]" />
           </div>
 
-          <p className="mt-3 text-[15px] text-zinc-300">
-            Réparation • Informatique • GSM • PlayStation • Vente accessoires
+          <p className="mt-3 text-[15px] leading-6 text-zinc-300">
+            Réparation • Informatique • GSM • PlayStation
+            <br />
+            Vente accessoires informatiques & GSM
           </p>
         </section>
 
-        {/* ================= TELEPHONES ================= */}
-
+        {/* TELEPHONES */}
         <section className="mt-7 grid grid-cols-2 gap-3">
           <PhoneCard
             number="23 030 072"
@@ -88,11 +88,9 @@ export default function Home() {
           />
         </section>
 
-        {/* ================= 6 ACTIONS ================= */}
-
+        {/* 6 ACTIONS */}
         <section className="mt-5 grid grid-cols-2 gap-3">
 
-          {/* WhatsApp */}
           <ActionCard
             href="https://wa.me/21623030072"
             title="WhatsApp"
@@ -101,7 +99,6 @@ export default function Home() {
             icon={<WhatsAppIcon />}
           />
 
-          {/* Facebook */}
           <ActionCard
             href="https://www.facebook.com/share/18GxnX6xhs/?mibextid=wwXIfr"
             title="Facebook"
@@ -110,7 +107,6 @@ export default function Home() {
             icon={<FacebookIcon />}
           />
 
-          {/* Google Avis */}
           <ActionCard
             href="https://search.google.com/local/writereview?placeid=ChIJebiR1S_L4hIRx3LlgTiSdB8"
             title="Avis Google"
@@ -119,7 +115,6 @@ export default function Home() {
             icon={<GoogleIcon />}
           />
 
-          {/* Maps */}
           <ActionCard
             href="https://maps.app.goo.gl/GxQnPZatFjWFCaji6?g_st=ic"
             title="Nous trouver"
@@ -128,7 +123,6 @@ export default function Home() {
             icon={<GoogleMapsIcon />}
           />
 
-          {/* Email boutique */}
           <ActionCard
             href="mailto:rms.service.informatique@gmail.com"
             title="Email boutique"
@@ -143,7 +137,6 @@ export default function Home() {
             icon={<MailGoldIcon />}
           />
 
-          {/* Email personnel */}
           <ActionCard
             href="mailto:boussarsaramine@gmail.com"
             title="Email personnel"
@@ -159,8 +152,7 @@ export default function Home() {
           />
         </section>
 
-        {/* ================= AJOUT CONTACT ================= */}
-
+        {/* AJOUT CONTACT */}
         <a
           href="/contact"
           className="
@@ -184,8 +176,7 @@ export default function Home() {
           </div>
         </a>
 
-        {/* ================= PARTAGE + QR ================= */}
-
+        {/* PARTAGE + QR */}
         <section
           className="
             mt-5 rounded-[26px]
@@ -230,7 +221,6 @@ export default function Home() {
               )}
             </div>
 
-            {/* QR */}
             <div className="relative rounded-[20px] bg-white p-2">
               <QRCodeSVG
                 value={CARD_URL}
@@ -241,7 +231,6 @@ export default function Home() {
                 includeMargin
               />
 
-              {/* Logo RMS au centre */}
               <div
                 className="
                   absolute left-1/2 top-1/2
@@ -260,8 +249,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= ADRESSE ================= */}
-
+        {/* ADRESSE */}
         <a
           href="https://maps.app.goo.gl/GxQnPZatFjWFCaji6?g_st=ic"
           target="_blank"
@@ -297,8 +285,7 @@ export default function Home() {
           </div>
         </a>
 
-        {/* ================= FOOTER ================= */}
-
+        {/* FOOTER */}
         <footer className="pb-5 pt-7 text-center">
           <div className="flex items-center justify-center gap-4">
             <span className="h-px w-14 bg-[#70551e]" />
@@ -318,10 +305,6 @@ export default function Home() {
     </main>
   );
 }
-
-/* ======================================================
-   COMPONENTS
-   ====================================================== */
 
 function PhoneCard({
   number,
@@ -410,10 +393,6 @@ function ActionCard({
   );
 }
 
-/* ======================================================
-   ICONS
-   ====================================================== */
-
 function PhoneIcon() {
   return (
     <svg
@@ -433,14 +412,7 @@ function PhoneIcon() {
 
 function WhatsAppIcon() {
   return (
-    <div
-      className="
-        flex h-[56px] w-[56px]
-        items-center justify-center
-        rounded-full bg-[#25D366]
-        shadow-[0_0_18px_rgba(37,211,102,.35)]
-      "
-    >
+    <div className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#25D366] shadow-[0_0_18px_rgba(37,211,102,.35)]">
       <svg
         width="34"
         height="34"
@@ -455,14 +427,7 @@ function WhatsAppIcon() {
 
 function FacebookIcon() {
   return (
-    <div
-      className="
-        flex h-[56px] w-[56px]
-        items-end justify-center
-        overflow-hidden rounded-full
-        bg-[#1877F2]
-      "
-    >
+    <div className="flex h-[56px] w-[56px] items-end justify-center overflow-hidden rounded-full bg-[#1877F2]">
       <span className="translate-y-[8px] text-[54px] font-bold leading-none text-white">
         f
       </span>
