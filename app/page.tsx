@@ -1,18 +1,4 @@
 export default function Home() {
-  const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Boussarsar Amine
-ORG:TechStore RMS
-TEL;TYPE=CELL:+21623030072
-TEL;TYPE=WORK:+21621203202
-EMAIL:boussarsaramine@gmail.com
-EMAIL;TYPE=WORK:rms.service.informatique@gmail.com
-ADR:;;25 Av. Mustapha Mohsen;Ariana;;2073;Tunisie
-END:VCARD`;
-
-  const contactUrl =
-    "data:text/vcard;charset=utf-8," + encodeURIComponent(vcard);
-
   return (
     <main className="min-h-screen bg-black text-white px-5 py-10">
       <div className="mx-auto w-full max-w-md">
@@ -22,7 +8,7 @@ END:VCARD`;
           <img
             src="/logo-rms.jpg.jpeg"
             alt="TechStore RMS"
-            className="mx-auto h-36 w-36 rounded-full border-4 border-yellow-600 object-cover shadow-xl"
+            className="mx-auto h-40 w-40 rounded-full border-4 border-yellow-500 object-cover shadow-xl"
           />
 
           <h1 className="mt-6 text-3xl font-bold">
@@ -67,7 +53,7 @@ END:VCARD`;
           💬 WhatsApp
         </a>
 
-        {/* Maps */}
+        {/* Localisation */}
         <a
           href="https://maps.app.goo.gl/GxQnPZatFjWFCaji6?g_st=ic"
           target="_blank"
@@ -77,7 +63,7 @@ END:VCARD`;
           📍 Localisation TechStore RMS
         </a>
 
-        {/* Google Reviews */}
+        {/* Avis Google */}
         <a
           href="https://search.google.com/local/writereview?placeid=ChIJebiR1S_L4hIRx3LlgTiSdB8"
           target="_blank"
@@ -116,7 +102,10 @@ END:VCARD`;
 
         {/* Adresse */}
         <div className="mt-6 rounded-2xl border border-zinc-800 bg-zinc-950 p-5">
-          <p className="font-semibold">📍 TechStore RMS</p>
+          <p className="font-semibold">
+            📍 TechStore RMS
+          </p>
+
           <p className="mt-2 text-sm text-zinc-400">
             25 Av. Mustapha Mohsen
             <br />
@@ -124,14 +113,18 @@ END:VCARD`;
           </p>
         </div>
 
-        {/* Ajouter contact */}
+        {/* Ajouter aux contacts */}
         <a
-          href={contactUrl}
-          download="Boussarsar-Amine-TechStore-RMS.vcf"
+          href="/contact"
           className="mt-6 block rounded-2xl border border-yellow-500 p-4 text-center font-bold text-yellow-500"
         >
           👤 Ajouter aux contacts
         </a>
+
+        <p className="mt-2 text-center text-xs text-zinc-500">
+          Sur Android : téléchargez le fichier puis ouvrez-le avec
+          l’application Contacts.
+        </p>
 
         <p className="mt-8 text-center text-xs text-zinc-600">
           TECHSTORE RMS • SINCE 2011
